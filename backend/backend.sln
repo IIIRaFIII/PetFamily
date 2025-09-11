@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.API", "src\PetFamily.API\PetFamily.API.csproj", "{BA9E2DF1-5C45-445B-AB5F-1A903A01415A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFamily.API", "src\PetFamily.API\PetFamily.API.csproj", "{BA9E2DF1-5C45-445B-AB5F-1A903A01415A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Infrastructure", "src\PetFamily.Infrastructure\PetFamily.Infrastructure.csproj", "{87F2BA70-8C4A-4C2A-A53F-0A8C9ACE6A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFamily.Infrastructure", "src\PetFamily.Infrastructure\PetFamily.Infrastructure.csproj", "{87F2BA70-8C4A-4C2A-A53F-0A8C9ACE6A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Domain", "src\PetFamily.Domain\PetFamily.Domain.csproj", "{6A6F36B1-C459-45C7-B454-37D764CA2382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Application", "src\PetFamily.Application\PetFamily.Application.csproj", "{3F896BAA-B714-462A-98A4-DB8786319685}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{87F2BA70-8C4A-4C2A-A53F-0A8C9ACE6A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F2BA70-8C4A-4C2A-A53F-0A8C9ACE6A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F2BA70-8C4A-4C2A-A53F-0A8C9ACE6A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6F36B1-C459-45C7-B454-37D764CA2382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6F36B1-C459-45C7-B454-37D764CA2382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6F36B1-C459-45C7-B454-37D764CA2382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6F36B1-C459-45C7-B454-37D764CA2382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F896BAA-B714-462A-98A4-DB8786319685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F896BAA-B714-462A-98A4-DB8786319685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F896BAA-B714-462A-98A4-DB8786319685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F896BAA-B714-462A-98A4-DB8786319685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
