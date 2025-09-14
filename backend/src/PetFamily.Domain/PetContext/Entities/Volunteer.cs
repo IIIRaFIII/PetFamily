@@ -47,8 +47,7 @@ namespace PetFamily.Domain.PetContext.Entities
             Experience experience,
             Phone phoneNumber,
             SocialNetwork socialNetwork,
-            TransferDetails transferDetails,
-            List<Pet> allOwnedPets
+            TransferDetails transferDetails
         )
         {
             Id = id;
@@ -62,7 +61,6 @@ namespace PetFamily.Domain.PetContext.Entities
             PhoneNumber = phoneNumber;
             SocialNetwork = socialNetwork;
             TransferDetails = transferDetails;
-            _allOwnedPets = allOwnedPets;
         }
 
         private int CountPetsWithHome() => AllOwnedPets.Count(p => p.HelpStatus.Value == PetStatus.FoundHome);
@@ -77,11 +75,10 @@ namespace PetFamily.Domain.PetContext.Entities
             Experience experience,
             Phone phoneNumber,
             SocialNetwork socialNetwork,
-            TransferDetails transferDetails,
-            List<Pet> allOwnedPets)
+            TransferDetails transferDetails)
         {
             var volunteer = new Volunteer(id, fullName, email, description, experience,
-                                          phoneNumber, socialNetwork, transferDetails, allOwnedPets);
+                                          phoneNumber, socialNetwork, transferDetails);
 
             return Result.Success(volunteer);
         }
