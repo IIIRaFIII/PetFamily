@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PetFamily.Domain.SpeciesContext.Entities
 {
-    public class Breed
+    public class Breed : Entity
     {
         public Guid Id { get; private set; }
 
@@ -17,6 +17,8 @@ namespace PetFamily.Domain.SpeciesContext.Entities
         {
             Name = name;
         }
+
+        protected Breed() { }
 
         public static Result<Breed> Create(string name)
         {

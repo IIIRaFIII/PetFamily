@@ -38,7 +38,7 @@ namespace PetFamily.Domain.PetContext.Entities
         private readonly List<Pet> _allOwnedPets;
         public IReadOnlyList<Pet> AllOwnedPets => _allOwnedPets;
 
-
+        protected Volunteer() { }
         private Volunteer(
             VolunteerId id,
             FullName fullName,

@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using CSharpFunctionalExtensions;
+﻿using CSharpFunctionalExtensions;
 using PetFamily.Domain.PetContext.ValueObjects.PetVO;
 using PetFamily.Domain.PetContext.ValueObjects.VolunteerVO;
 using PetFamily.Domain.Shared;
 
 namespace PetFamily.Domain.PetContext.Entities
 {
-    public class Pet : Entity
-    {
+    public class Pet : Entity 
+    { 
         public PetId Id { get; private set; }
         // Кличка
         public Name Name { get; private set; }
@@ -46,6 +38,7 @@ namespace PetFamily.Domain.PetContext.Entities
         // Дата создания
         public DateTime CreatedOn { get; private set; } = DateTime.Now;
 
+        protected Pet() { }
         public Pet(
         PetId id,
         Name name,
@@ -79,6 +72,44 @@ namespace PetFamily.Domain.PetContext.Entities
         IsVaccinated = isVaccinated;
         HelpStatus = helpStatus;
         TransferDetails = transferDetails;
+        }
+
+        public static Result<Pet> Create(
+            PetId id,
+            Name name,
+            Description description,
+            SpeciesBreed speciesBreed,
+            Color color,
+            HealthInfo healthInfo,
+            Address address,
+            Weight weight,
+            Height height,
+            Phone ownerPhoneNumber,
+            IsCastrated isCastrated,
+            DateOfBirth dateOfBirth,
+            IsVaccinated isVaccinated,
+            HelpStatus helpStatus,
+            TransferDetails transferDetails)
+        {
+            var pet = new Pet(
+                id,
+                name,
+                description,
+                speciesBreed,
+                color,
+                healthInfo,
+                address,
+                weight,
+                height,
+                ownerPhoneNumber,
+                isCastrated,
+                dateOfBirth,
+                isVaccinated,
+                helpStatus,
+                transferDetails
+            );
+
+            return Result.Success(pet);
         }
     }
 }
