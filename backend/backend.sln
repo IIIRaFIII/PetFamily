@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFamily.API", "src\PetFam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFamily.Infrastructure", "src\PetFamily.Infrastructure\PetFamily.Infrastructure.csproj", "{87F2BA70-8C4A-4C2A-A53F-0A8C9ACE6A43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Domain", "src\PetFamily.Domain\PetFamily.Domain.csproj", "{6A6F36B1-C459-45C7-B454-37D764CA2382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFamily.Domain", "src\PetFamily.Domain\PetFamily.Domain.csproj", "{6A6F36B1-C459-45C7-B454-37D764CA2382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFamily.Application", "src\PetFamily.Application\PetFamily.Application.csproj", "{3F896BAA-B714-462A-98A4-DB8786319685}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFamily.Application", "src\PetFamily.Application\PetFamily.Application.csproj", "{3F896BAA-B714-462A-98A4-DB8786319685}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E8E45861-9A71-4B20-B155-8DA5C2440E10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3F896BAA-B714-462A-98A4-DB8786319685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F896BAA-B714-462A-98A4-DB8786319685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F896BAA-B714-462A-98A4-DB8786319685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E45861-9A71-4B20-B155-8DA5C2440E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E45861-9A71-4B20-B155-8DA5C2440E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E45861-9A71-4B20-B155-8DA5C2440E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E45861-9A71-4B20-B155-8DA5C2440E10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

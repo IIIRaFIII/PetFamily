@@ -1,0 +1,25 @@
+﻿version: '3.9'
+
+services:
+  petfamily-db:
+    container_name: petfamily-postgres
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: pet_family
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"            # localhost:5434 → контейнер:5432
+    volumes:
+      - petfamily-postgres-data:/var/lib/postgresql/data
+    networks:
+      - petfamily-network
+
+
+volumes:
+  petfamily-postgres-data:
+  
+networks:
+  petfamily-network:
+    driver: bridge

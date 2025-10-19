@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PetFamily.Domain.SpeciesContext.Entities
 {
-    public class Species
+    public class Species : Entity
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
@@ -18,6 +18,12 @@ namespace PetFamily.Domain.SpeciesContext.Entities
             Name = name;
             _breeds = breeds;
         }
+
+        protected Species()
+        {
+            _breeds = new List<Breed>();
+        }
+
         public static Result<Species> Create(string name, List<Breed> breeds)
         {
             if (string.IsNullOrWhiteSpace(name))
